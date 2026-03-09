@@ -1,8 +1,8 @@
 // =====================================================
 // CONFIGURATION - Gets from config.js
 // =====================================================
-const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss:anura.pro";
-const WISP_SERVERS = [{ name: "Anura", url: "wss:anura.pro" }];
+const DEFAULT_WISP = window.SITE_CONFIG?.defaultWisp ?? "wss://anura.pro";
+const WISP_SERVERS = [{ name: "Anura", url: "wss://anura.pro" }];
 
 // Initialize default proxy server if not set
 if (!localStorage.getItem("proxServer")) {
