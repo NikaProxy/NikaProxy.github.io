@@ -91,7 +91,7 @@ self.addEventListener('activate', (e) => e.waitUntil(self.clients.claim()));
 
 // Wisp configuration - receives from script.js via postMessage
 let wispConfig = {
-    wispurl: "wss:anura.pro",
+    wispurl: "wss://anura.pro",
     servers: [],
     autoswitch: true
 };
