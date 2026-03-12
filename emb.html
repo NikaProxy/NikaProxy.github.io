@@ -1,10 +1,7 @@
 <script>
 function start() {
-    let hash = window.location.hash; 
+    let hash = location.hash.slice(1); 
     const encoded = encodeURIComponent(hash);
-    if (hash.startsWith('#')) {
-        hash = hash.substring(1); 
-    }
     const newUrl = "https://nikaproxy.github.io/scramjet/" + encoded;
     var load = document.getElementById('load');
     load.src = newUrl; 
