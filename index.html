@@ -1,6 +1,6 @@
 <head>
   <title>Loading...</title>
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/mercuryworkshop/scramjet-app@latest/public/favicon.ico">
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -192,10 +192,10 @@
           await connection.setTransport("index1.mjs", [{ wisp: wispUrl }]);
           break;
         case "libcurl":
-          await connection.setTransport("https://cdn.jsdelivr.net/npm/@mercuryworkshop/libcurl-transport/dist/index.mjs", [{ websocket: wispUrl }]);
+          await connection.setTransport("index2.mjs", [{ websocket: wispUrl }]);
           break;
         default:
-          await connection.setTransport("https://cdn.jsdelivr.net/npm/@mercuryworkshop/epoxy-transport/dist/index.mjs", [{ wisp: wispUrl }]);
+          await connection.setTransport("index3.mjs", [{ wisp: wispUrl }]);
           break;
       }
     }
