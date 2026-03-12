@@ -1,16 +1,16 @@
 <script>
-
-// Get the hash part (which is everything after the first #)
-let hash = window.location.hash; 
-const encoded = encodeURIComponent(hash);
-if (hash.startsWith('#')) {
-    hash = hash.substring(1); 
+function start() {
+    let hash = window.location.hash; 
+    const encoded = encodeURIComponent(hash);
+    if (hash.startsWith('#')) {
+        hash = hash.substring(1); 
+    }
+    const newUrl = "https://nikaproxy.github.io/scramjet/" + encoded;
+    var load = document.getElementById('load');
+    load.src = newUrl; 
 }
-const newUrl = "https://nikaproxy.github.io/scramjet/" + encoded;
-var load = document.getElementById('load');
-load.src = newUrl; 
 </script>
-<iframe id="load" src="">
+<iframe id="load" onload=start()>
     
 </iframe>
     <style>
