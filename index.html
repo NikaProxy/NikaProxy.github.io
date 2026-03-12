@@ -106,9 +106,9 @@
   </div>
   <iframe id="iframe" width="100%"></iframe>
 
-  <script src="https://cdn.jsdelivr.net/gh/AerialiteLabs/tinyjet-frontend@latest/tinyjet/scramjet.all.js" defer></script>
+  <script src="scramjet.all.js" defer></script>
   <script type="module" defer>
-    import * as BareMux from "https://cdn.jsdelivr.net/gh/AerialiteLabs/tinyjet-frontend@latest/tinyjet/index.mjs";
+    import * as BareMux from "index.mjs";
 
     let version = "";
 
@@ -131,9 +131,9 @@
     const { ScramjetController } = $scramjetLoadController();
     const scramjet = new ScramjetController({ 
       files: { 
-        wasm: "https://cdn.jsdelivr.net/gh/AerialiteLabs/tinyjet-frontend@latest/tinyjet/wasm.wasm", 
-        all: "https://cdn.jsdelivr.net/gh/AerialiteLabs/tinyjet-frontend@latest/tinyjet/scramjet.all.js", 
-        sync: "https://cdn.jsdelivr.net/gh/AerialiteLabs/tinyjet-frontend@latest/tinyjet/scramjet.sync.js" 
+        wasm: "wasm.wasm", 
+        all: "scramjet.all.js", 
+        sync: "scramjet.sync.js" 
       } 
     });
 
@@ -189,7 +189,7 @@
       localStorage.setItem('selectedTransport', transportsel);
       switch (transportsel) {
         case "epoxy":
-          await connection.setTransport("https://cdn.jsdelivr.net/npm/@mercuryworkshop/epoxy-transport/dist/index.mjs", [{ wisp: wispUrl }]);
+          await connection.setTransport("index1.mjs", [{ wisp: wispUrl }]);
           break;
         case "libcurl":
           await connection.setTransport("https://cdn.jsdelivr.net/npm/@mercuryworkshop/libcurl-transport/dist/index.mjs", [{ websocket: wispUrl }]);
